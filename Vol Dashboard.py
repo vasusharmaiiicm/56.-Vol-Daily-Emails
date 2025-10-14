@@ -6,8 +6,8 @@ from nbformat import read, write
 print("setting policy")
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-input_ntbk = "J:\\56. Vol Daily Emails\v12.ipynb"
-output_ntbk = "J:\\56. Vol Daily Emails\v12.ipynb"
+input_ntbk = "J:\\All Data\\56. Vol Daily Emails\\v19.ipynb"
+output_ntbk = "J:\\All Data\\56. Vol Daily Emails\\v19.ipynb"
 
 print("loading ntbk")
 
@@ -16,7 +16,7 @@ with open(input_ntbk, "r", encoding="utf-8") as f:
 
 print("executing ntbk")
 executor = ExecutePreprocessor(timeout=60000, kernel_name="python3")
-executor.preprocess(notebook, {'metadata': {'path': "J:\\56. Vol Daily Emails\\"}})
+executor.preprocess(notebook, {'metadata': {'path': "J:\\All Data\\56. Vol Daily Emails\\"}})
 
 print("saving ntbk")
 with open(output_ntbk, "w", encoding="utf-8") as f:
